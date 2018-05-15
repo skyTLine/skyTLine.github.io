@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Titan'Notes" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="1.网站配置文件1.1配置文件说明1.1.1网站配置文件的存储位置：bolg文件夹/_config.yml;1.1.2配置文件中，冒号后面一定要加空格;1.1.3Hexo官方配置说明; 1.2配置文件详解12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo配置文件详解">
+<meta property="og:url" content="http://yoursite.com/2018/05/15/Hexo配置文件详解/index.html">
+<meta property="og:site_name" content="Titan&#39;Notes">
+<meta property="og:description" content="1.网站配置文件1.1配置文件说明1.1.1网站配置文件的存储位置：bolg文件夹/_config.yml;1.1.2配置文件中，冒号后面一定要加空格;1.1.3Hexo官方配置说明; 1.2配置文件详解12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-15T12:13:36.144Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo配置文件详解">
+<meta name="twitter:description" content="1.网站配置文件1.1配置文件说明1.1.1网站配置文件的存储位置：bolg文件夹/_config.yml;1.1.2配置文件中，冒号后面一定要加空格;1.1.3Hexo官方配置说明; 1.2配置文件详解12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/05/15/Hexo配置文件详解/"/>
+
+
+
+
+
+  <title>Hexo配置文件详解 | Titan'Notes</title>
+  
+
+
+
+
+
+
+
+
+  <!-- 页面点击小红心 -->
+  <script type="text/javascript" src="/js/src/love.js"></script>
+</head>
+
+
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Titan'Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Better late than never</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/15/Hexo配置文件详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="leitian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://i4.bvimg.com/645642/cc1d94afddff082dt.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Titan'Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Hexo配置文件详解</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-15T19:30:17+08:00">
+                2018-05-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  1,170 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  5 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-网站配置文件"><a href="#1-网站配置文件" class="headerlink" title="1.网站配置文件"></a>1.网站配置文件</h3><h4 id="1-1配置文件说明"><a href="#1-1配置文件说明" class="headerlink" title="1.1配置文件说明"></a>1.1配置文件说明</h4><p>1.1.1网站配置文件的存储位置：bolg文件夹/_config.yml;<br>1.1.2配置文件中，冒号后面一定要加空格;<br>1.1.3<a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">Hexo官方配置说明</a>;</p>
+<h4 id="1-2配置文件详解"><a href="#1-2配置文件详解" class="headerlink" title="1.2配置文件详解"></a>1.2配置文件详解</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br></pre></td><td class="code"><pre><span class="line"># Hexo Configuration Hexo配置文件</span><br><span class="line">## Docs: https://hexo.io/docs/configuration.html</span><br><span class="line">## Source: https://github.com/hexojs/hexo/</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 网站信息</span><br><span class="line">#标题</span><br><span class="line">title: 学志の博客</span><br><span class="line">#副标题</span><br><span class="line">subtitle: 记录学习的技能和遇到的问题</span><br><span class="line">#网站描述</span><br><span class="line">description: 做自己爱做的事，爱自己在做的事！</span><br><span class="line">#作者昵称</span><br><span class="line">author: 张学志</span><br><span class="line">#网站语言，默认英语，设置简体汉语</span><br><span class="line">language: zh-Hans</span><br><span class="line"></span><br><span class="line">#时区，默认电脑时区</span><br><span class="line">#timezone: </span><br><span class="line">timezone: Asia/Shanghai</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 网址设置</span><br><span class="line">#如果网站是放在子目录中，将url设置成&apos;http://yoursite.com/child&apos;，将root设置成&apos;/child/&apos;</span><br><span class="line">## If your site is put in a subdirectory, set url as &apos;http://yoursite.com/child&apos; and root as &apos;/child/&apos;</span><br><span class="line">#网址</span><br><span class="line">url: http://zhangxuezhi.com</span><br><span class="line">#网站根目录。如果网站是放在子目录中，将root设置成&apos;子目录名&apos;</span><br><span class="line">root: /</span><br><span class="line">#文章链接地址格式 。即文章存放的目录。</span><br><span class="line">permalink: :year/:month/:day/:title/</span><br><span class="line">permalink_defaults:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 目录设置</span><br><span class="line">#资源文件夹，放在里面的文件会上传到github中</span><br><span class="line">source_dir: source</span><br><span class="line">#公共文件夹，存放生成的静态文件</span><br><span class="line">public_dir: public</span><br><span class="line">#标签文件夹，默认是tags。实际存放在source/tags中。</span><br><span class="line">tag_dir: tags</span><br><span class="line">rss_dir: rss</span><br><span class="line">#档案文件夹，默认是archives。</span><br><span class="line">archive_dir: archives</span><br><span class="line">#分类文件夹，默认是categories。实际存放在source/categories中。</span><br><span class="line">category_dir: categories</span><br><span class="line">#代码文件夹，默认是downloads/code</span><br><span class="line">code_dir: downloads/code</span><br><span class="line">#国际化文件夹，默认跟language相同</span><br><span class="line">i18n_dir: :lang</span><br><span class="line">#不需要渲染的文件夹或文件夹,放在[]中</span><br><span class="line"># 这两个文件是百度和google的站长验证文件，不能渲染，否则会改变内容，不能验证过</span><br><span class="line">skip_render: [baidu_verify_R9MZjdMkXT.html, google0f8fac7da2b48ef8.html, README.md, 模板.md]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 写作选项</span><br><span class="line"># 新建博文（帖子）的默认名称</span><br><span class="line"># File name of new posts</span><br><span class="line">new_post_name: :title.md </span><br><span class="line">#默认布局模板是post，而不是draft和page</span><br><span class="line">default_layout: post</span><br><span class="line">#是否将标题转换成标题形式（首字母大写）</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">#在新标签页面中打开网页</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">#是否渲染草稿</span><br><span class="line">render_drafts: false</span><br><span class="line">#启动 Asset 文件夹</span><br><span class="line">post_asset_folder: false</span><br><span class="line">#把链接改为与根目录的相对位址</span><br><span class="line">relative_link: false</span><br><span class="line">#显示未来的文章</span><br><span class="line">future: true</span><br><span class="line">#代码块的设置</span><br><span class="line">highlight:</span><br><span class="line">  enable: true          #  使用代码高亮</span><br><span class="line">  line_number: true # 显示行号</span><br><span class="line">  auto_detect: true  # 自动检测语言</span><br><span class="line">  tab_replace:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 分类和标签</span><br><span class="line"># 默认分类</span><br><span class="line">default_category: uncategorized</span><br><span class="line">#分类别名</span><br><span class="line">category_map:</span><br><span class="line">#标签别名</span><br><span class="line">tag_map:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 日期和时间格式</span><br><span class="line">#Hexo 使用 Moment.js 来解析和显示时间。</span><br><span class="line">## You can customize the date format as defined in</span><br><span class="line">## http://momentjs.com/docs/#/displaying/format/</span><br><span class="line">date_format: YYYY-MM-DD</span><br><span class="line">time_format: HH:mm:ss</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 分页配置</span><br><span class="line"># ---------------下面选项需要对应插件的支持---------------</span><br><span class="line"># npm install hexo-generator-index --save</span><br><span class="line"># npm install hexo-generator-archive --save</span><br><span class="line"># npm install hexo-generator-category --save</span><br><span class="line"># npm install hexo-generator-tag --save</span><br><span class="line">## Set per_page to 0 to disable pagination</span><br><span class="line">#每页显示的文章量 </span><br><span class="line">#per_page: 20</span><br><span class="line">#首页的分页设置</span><br><span class="line">index_generator:</span><br><span class="line">  per_page: 5</span><br><span class="line">#归档页的分页设置</span><br><span class="line">archive_generator:</span><br><span class="line">  per_page: 30</span><br><span class="line">  yearly: true</span><br><span class="line">  monthly: true</span><br><span class="line">#标签页的分页设置</span><br><span class="line">tag_generator:</span><br><span class="line">  per_page: 20</span><br><span class="line"></span><br><span class="line">#分页路径，在public中可以看到</span><br><span class="line">#pagination_dir: page</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># Extensions 拓展插件配置</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">plugins: </span><br><span class="line">baidusitemap: </span><br><span class="line">  path: baidusitemap.xml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 配置RSS</span><br><span class="line">feed: </span><br><span class="line">  #feed 类型 (atom/rss2)</span><br><span class="line">  type: atom   </span><br><span class="line">  #rss 路径</span><br><span class="line">  path: atom.xml  </span><br><span class="line">  #在 rss 中最多生成的文章数(0显示所有)</span><br><span class="line">  limit: 0</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 自定义站点内容搜索</span><br><span class="line"># 需要先安装插件：</span><br><span class="line"># npm install hexo-generator-search --save</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  # 如只想索引文章，可设置为post</span><br><span class="line">  field: all </span><br><span class="line"></span><br><span class="line"># 主题配置</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#theme: false #禁用主题</span><br><span class="line">#theme: landscape</span><br><span class="line">theme: next</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 部署配置</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  #repo: https://github.com/xuezhisd/xuezhisd.github.io.git</span><br><span class="line">  repo: </span><br><span class="line">    # 部署到github</span><br><span class="line">    github: git@github.com:xuezhisd/xuezhisd.github.io.git,master</span><br><span class="line">    # 部署到coding.net。取消注释，可同时部署</span><br><span class="line">    #coding: git@git.coding.net:xuezhisd/blog.git,coding-pages</span><br><span class="line">  #type: baidu_url_submitter</span><br></pre></td></tr></table></figure>
+<h4 id="1-3主题设置"><a href="#1-3主题设置" class="headerlink" title="1.3主题设置"></a>1.3主题设置</h4><p>1.默认主题是landscape；<br>2.<a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo官方主题页面</a>。从中选择喜欢的主题，下载并放到themes文件中；<br>3.我使用的主题是<a href="http://theme-next.iissnan.com/theme-settings.html" target="_blank" rel="noopener">NexT</a>。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/15/Hexo使用技巧/" rel="next" title="Hexo使用技巧">
+                <i class="fa fa-chevron-left"></i> Hexo使用技巧
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+  
+  <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: green;font-size:14px;">------ 本文结束，感谢浏览------</div>
+    
+</div>
+    
+ </div>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://i4.bvimg.com/645642/cc1d94afddff082dt.jpg"
+                alt="leitian" />
+            
+              <p class="site-author-name" itemprop="name">leitian</p>
+              <p class="site-description motion-element" itemprop="description">种一棵树最好的年龄是十年前，而后是现在。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://plus.google.com/yourname" target="_blank" title="Google">
+                      
+                        <i class="fa fa-fw fa-google"></i>Google</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="baidu" target="_blank">baidu</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://example.com/" title="google" target="_blank">google</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-网站配置文件"><span class="nav-number">1.</span> <span class="nav-text">1.网站配置文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1配置文件说明"><span class="nav-number">1.1.</span> <span class="nav-text">1.1配置文件说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2配置文件详解"><span class="nav-number">1.2.</span> <span class="nav-text">1.2配置文件详解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3主题设置"><span class="nav-number">1.3.</span> <span class="nav-text">1.3主题设置</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">leitian</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">3.3k</span>
+  
+</div>
+
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+-->
+
+
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共3.3k字</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/"});</script></body>
+</html>
