@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo,theme," />
 
 
 
@@ -86,20 +86,21 @@
 
 
 
-<meta name="description" content="1.插入图片1.1插入本地图片1.1.1绝对路径当Hexo项目中只用到少量图片时，可以将图片统一放在source/images文件夹中，通过markdown语法访问它们。    1.1.1相对路径图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置_config.yml来生成。  post_asset_folder: true  config.yml文件中">
+<meta name="description" content="修改主题打开 themes/next/_config.yml 文件，搜索 scheme 关键字，将你需用启用的 scheme 前面注释 # 去除即可。推荐使用next主题，因为可扩展性强，网上文章比较多，当然你也可以选择其他主题。12345# Schemes#scheme: Muse # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白#scheme: Mist # Muse 的">
+<meta name="keywords" content="Hexo,theme">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo使用技巧">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/Hexo使用技巧/index.html">
 <meta property="og:site_name" content="Titan&#39;Notes">
-<meta property="og:description" content="1.插入图片1.1插入本地图片1.1.1绝对路径当Hexo项目中只用到少量图片时，可以将图片统一放在source/images文件夹中，通过markdown语法访问它们。    1.1.1相对路径图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置_config.yml来生成。  post_asset_folder: true  config.yml文件中">
+<meta property="og:description" content="修改主题打开 themes/next/_config.yml 文件，搜索 scheme 关键字，将你需用启用的 scheme 前面注释 # 去除即可。推荐使用next主题，因为可扩展性强，网上文章比较多，当然你也可以选择其他主题。12345# Schemes#scheme: Muse # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白#scheme: Mist # Muse 的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/images/image.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo使用技巧/image.jpg">
-<meta property="og:updated_time" content="2018-05-15T12:23:54.864Z">
+<meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo使用技巧/20180516001.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo使用技巧/20180516002.jpg">
+<meta property="og:updated_time" content="2018-05-16T04:42:34.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用技巧">
-<meta name="twitter:description" content="1.插入图片1.1插入本地图片1.1.1绝对路径当Hexo项目中只用到少量图片时，可以将图片统一放在source/images文件夹中，通过markdown语法访问它们。    1.1.1相对路径图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置_config.yml来生成。  post_asset_folder: true  config.yml文件中">
-<meta name="twitter:image" content="http://yoursite.com/images/image.jpg">
+<meta name="twitter:description" content="修改主题打开 themes/next/_config.yml 文件，搜索 scheme 关键字，将你需用启用的 scheme 前面注释 # 去除即可。推荐使用next主题，因为可扩展性强，网上文章比较多，当然你也可以选择其他主题。12345# Schemes#scheme: Muse # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白#scheme: Mist # Muse 的">
+<meta name="twitter:image" content="http://yoursite.com/2018/05/15/Hexo使用技巧/20180516001.jpg">
 
 
 
@@ -207,7 +208,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -237,29 +238,9 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
           </a>
         </li>
       
@@ -336,6 +317,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/next/" itemprop="url" rel="index">
+                    <span itemprop="name">next</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -357,7 +360,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  224 字
+                  2,414 字
                 </span>
               
 
@@ -373,7 +376,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  11 分钟
                 </span>
               
             </div>
@@ -394,19 +397,75 @@
       
 
       
-        <h3 id="1-插入图片"><a href="#1-插入图片" class="headerlink" title="1.插入图片"></a>1.插入图片</h3><h4 id="1-1插入本地图片"><a href="#1-1插入本地图片" class="headerlink" title="1.1插入本地图片"></a>1.1插入本地图片</h4><h5 id="1-1-1绝对路径"><a href="#1-1-1绝对路径" class="headerlink" title="1.1.1绝对路径"></a>1.1.1绝对路径</h5><p>当Hexo项目中只用到少量图片时，可以将图片统一放在source/images文件夹中，通过markdown语法访问它们。</p>
+        <h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><p>打开 themes/next/_config.yml 文件，搜索 scheme 关键字，将你需用启用的 scheme 前面注释 # 去除即可。推荐使用next主题，因为可扩展性强，网上文章比较多，当然你也可以选择其他<a href="">主题</a>。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Schemes</span><br><span class="line">#scheme: Muse # 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白</span><br><span class="line">#scheme: Mist # Muse 的紧凑版本，整洁有序的单栏外观</span><br><span class="line">scheme: Pisces # 双栏 Scheme，小家碧玉似的清新</span><br><span class="line">#scheme: Gemini # 类似 Pisces</span><br></pre></td></tr></table></figure></p>
+<h3 id="菜单页"><a href="#菜单页" class="headerlink" title="菜单页"></a>菜单页</h3><h4 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: / || home</span><br><span class="line">  about: /about/ || user</span><br><span class="line">  tags: /tags/ || tags</span><br><span class="line">  categories: /categories/ || th</span><br><span class="line">  archives: /archives/ || archive</span><br><span class="line">  #schedule: /schedule/ || calendar</span><br><span class="line">  #sitemap: /sitemap.xml || sitemap</span><br><span class="line">  #commonweal: /404/ || heartbeat</span><br><span class="line"></span><br><span class="line"># Enable/Disable menu icons.</span><br><span class="line">menu_icons:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+<p>结构：<code>Key: /link/ || icon</code><br>Key：其中 Key name 是一个名称，这个名称并不直接显示在页面上，只将用于匹配图标以及翻译，对应的翻译配置文件为D:\Blog\blog\themes\next\languages\zh-Hans.yml里面；<br>link：menu索引路径，在source目录下，创建命令：hexo new page “pagename”；<br>icon：图标,可以自定义<a href="http://www.bootcss.com/p/font-awesome/#" target="_blank" rel="noopener">FontAwsome官网</a>；</p>
 <blockquote>
-<p><img src="/images/image.jpg" alt=""></p>
+<p>区分一下什么是页面，什么是文章：<br>在hexo中menu下的内容都是新的页面我们可以通过hexo new page “pagename” 创建，hexo默认的页面只有home,archives,tags 三个，<br>之后我们写的博文就是文章，通过hexo new “name” 创建的name.md 文件在根目录的source_posts 下，<br>在每一个文章的头部，我们可以配置其tags或者categories内容，相当于文章是页面的下一级；</p>
 </blockquote>
-<h5 id="1-1-1相对路径"><a href="#1-1-1相对路径" class="headerlink" title="1.1.1相对路径"></a>1.1.1相对路径</h5><p>图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置_config.yml来生成。</p>
+<p>如图：<br><img src="20180516001.jpg" alt="menu"><br>点击进去对应的menu二级目录，找到index.md就可以修改页面内容。</p>
+<h4 id="关联博客"><a href="#关联博客" class="headerlink" title="关联博客"></a>关联博客</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Hexo+github</span><br><span class="line">date: 2018-05-15 15:58:31</span><br><span class="line">tags: [Hexo,github]</span><br><span class="line">categories: blog</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>tags、categories都是支持数组的形式的，可以添加多个tags、categories。这样我们在tags、categories页面就可以看见相应的分类了。</p>
+<h4 id="新建404界面"><a href="#新建404界面" class="headerlink" title="新建404界面"></a>新建404界面</h4><p>在站点根目录下,输入 hexo new page 404 ,默认在 Hexo 站点下/source/404/index.md 打开新建的404界面，在顶部插入一行，写上 permalink: /404 ，<br>这表示指定该页固定链接为 http://“主页”/404.html。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: #404 Not Found：该页无法显示</span><br><span class="line">date: 2017-09-06 15:37:18</span><br><span class="line">comments: false</span><br><span class="line">permalink: /404</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<p>如果你不想编辑属于自己的404界面,可以显示腾讯公益404界面,代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8;&quot;/&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge,chrome=1&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;all&quot; /&gt;</span><br><span class="line">  &lt;meta name=&quot;robots&quot; content=&quot;index,follow&quot;/&gt;</span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://qzone.qq.com/gy/404/style/404style.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;script type=&quot;text/plain&quot; src=&quot;http://www.qq.com/404/search_children.js&quot;</span><br><span class="line">          charset=&quot;utf-8&quot; homePageUrl=&quot;/&quot;</span><br><span class="line">          homePageName=&quot;回到我的主页&quot;&gt;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/data.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://qzone.qq.com/gy/404/page.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="头像设置"><a href="#头像设置" class="headerlink" title="头像设置"></a>头像设置</h3><h4 id="修改头像"><a href="#修改头像" class="headerlink" title="修改头像"></a>修改头像</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Sidebar Avatar</span><br><span class="line"># in theme directory(source/images): /images/avatar.jpg</span><br><span class="line"># in site  directory(source/uploads): /uploads/avatar.jpg</span><br><span class="line">avatar: http://example.com/avatar.png</span><br></pre></td></tr></table></figure>
+<p>可以使用http链接，也可以使用本地照片，把图片放入 themes/next/source/images 下,修改 avatar：</p>
+<blockquote>
+<p>avatar: /images/avatar.gif</p>
+</blockquote>
+<h4 id="设置头像边框为圆形框"><a href="#设置头像边框为圆形框" class="headerlink" title="设置头像边框为圆形框"></a>设置头像边框为圆形框</h4><p>打开位于 themes/next/source/css/_common/components/sidebar/sidebar-author.syl 文件,修改如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line"> // 修改头像边框</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  -webkit-border-radius: 50%;</span><br><span class="line">  -moz-border-radius: 50%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="鼠标放置头像上旋转"><a href="#鼠标放置头像上旋转" class="headerlink" title="鼠标放置头像上旋转"></a>鼠标放置头像上旋转</h4><p>打开\themes\next\source\css_common\components\sidebar\sidebar-author.styl 文件,修改如下:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">.site-author-image &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  margin: 0 auto;</span><br><span class="line">  padding: $site-author-image-padding;</span><br><span class="line">  max-width: $site-author-image-width;</span><br><span class="line">  height: $site-author-image-height;</span><br><span class="line">  border: $site-author-image-border-width solid $site-author-image-border-color;</span><br><span class="line"> // 修改头像边框</span><br><span class="line">  border-radius: 50%;</span><br><span class="line">  -webkit-border-radius: 50%;</span><br><span class="line">  -moz-border-radius: 50%;</span><br><span class="line">  // 设置旋转</span><br><span class="line">  transition: 1.4s all;</span><br><span class="line">&#125;</span><br><span class="line">// 可旋转的圆形头像,`hover`动作</span><br><span class="line">.site-author-image:hover &#123;</span><br><span class="line">    -webkit-transform: rotate(360deg);</span><br><span class="line">    -moz-transform: rotate(360deg);</span><br><span class="line">    -ms-transform: rotate(360deg);</span><br><span class="line">    -transform: rotate(360deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="浏览页面的时候显示当前浏览进度"><a href="#浏览页面的时候显示当前浏览进度" class="headerlink" title="浏览页面的时候显示当前浏览进度"></a>浏览页面的时候显示当前浏览进度</h3><p>打开 themes/next/_config.yml ,搜索关键字 scrollpercent ,把 false 改为 true。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure></p>
+<p>如果想把 top按钮放在侧边栏,打开 themes/next/_config.yml ,搜索关键字 b2t ,把 false 改为 true。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Back to top in sidebar</span><br><span class="line">  b2t: true</span><br><span class="line"></span><br><span class="line">  # Scroll percent label in b2t button</span><br><span class="line">  scrollpercent: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="特效"><a href="#特效" class="headerlink" title="特效"></a>特效</h3><h4 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h4><blockquote>
+<p>如果next主题在5.1.1以上的话就不用我这样设置，<br>直接在主题配置文件中找到canvas_nest: false，把它改为canvas_nest: true就行了（注意分号后面要加一个空格）;</p>
+</blockquote>
+<h4 id="实现点击出现桃心效果"><a href="#实现点击出现桃心效果" class="headerlink" title="实现点击出现桃心效果"></a>实现点击出现桃心效果</h4><p>新建love.js文件并且将代码复制进去，然后保存。将love.js文件放到路径/themes/next/source/js/src里面，<br>然后打开\themes\next\layout_layout.swig文件,在末尾（在前面引用会出现找不到的bug）添加以下代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>love.js内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;</span><br><span class="line">.heart:after,.heart:before&#123;content: &apos;&apos;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;</span><br><span class="line">function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);</span><br><span class="line">background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),</span><br><span class="line">t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;</span><br><span class="line">var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure></p>
+<h4 id="修改文章内链接文本样式"><a href="#修改文章内链接文本样式" class="headerlink" title="修改文章内链接文本样式"></a>修改文章内链接文本样式</h4><p>修改文件 themes\next\source\css_common\components\post\post.styl，在末尾添加如下css样式：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 文章内链接文本样式</span><br><span class="line">.post-body p a&#123;</span><br><span class="line">  color: #0593d3;</span><br><span class="line">  border-bottom: none;</span><br><span class="line">  border-bottom: 1px solid #0593d3;</span><br><span class="line">  &amp;:hover &#123;</span><br><span class="line">    color: #fc6423;</span><br><span class="line">    border-bottom: none;</span><br><span class="line">    border-bottom: 1px solid #fc6423;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>其中选择.post-body 是为了不影响标题，选择 p 是为了不影响首页“阅读全文”的显示样式,颜色可以自己定义。</p>
+<h4 id="代码块自定义样式"><a href="#代码块自定义样式" class="headerlink" title="代码块自定义样式"></a>代码块自定义样式</h4><p>打开\themes\next\source\css_custom\custom.styl:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">code &#123;</span><br><span class="line">    color: #ff7600;</span><br><span class="line">    background: #fbf7f8;</span><br><span class="line">    margin: 2px;</span><br><span class="line">&#125;</span><br><span class="line">// 边框的自定义样式</span><br><span class="line">.highlight, pre &#123;</span><br><span class="line">    margin: 5px 0;</span><br><span class="line">    padding: 5px;</span><br><span class="line">    border-radius: 3px;</span><br><span class="line">&#125;</span><br><span class="line">.highlight, code, pre &#123;</span><br><span class="line">    border: 1px solid #d6d6d6;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="添加顶部加载条"><a href="#添加顶部加载条" class="headerlink" title="添加顶部加载条"></a>添加顶部加载条</h4><p>打开/themes/next/layout/_partials/head.swig文件，添加以下代码:</p>
+<blockquote>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+</blockquote>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+
+<p>但是，默认的是粉色的，要改变颜色可以在/themes/next/layout/_partials/head.swig文件中添加如下代码（接在刚才link的后面）:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    .pace .pace-progress &#123;</span><br><span class="line">        background: #1E92FB; /*进度条颜色*/</span><br><span class="line">        height: 3px;</span><br><span class="line">    &#125;</span><br><span class="line">    .pace .pace-progress-inner &#123;</span><br><span class="line">         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/</span><br><span class="line">    &#125;</span><br><span class="line">    .pace .pace-activity &#123;</span><br><span class="line">        border-top-color: #1E92FB;    /*上边框颜色*/</span><br><span class="line">        border-left-color: #1E92FB;    /*左边框颜色*/</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h3><h4 id="在网站底部加上访问量"><a href="#在网站底部加上访问量" class="headerlink" title="在网站底部加上访问量"></a>在网站底部加上访问量</h4><p>打开\themes\next\layout_partials\footer.swig文件,在copyright前加上画红线这句话：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script async src=&quot;https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>然后再合适的位置添加显示统计的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;powered-by&quot;&gt;</span><br><span class="line">&lt;i class=&quot;fa fa-user-md&quot;&gt;&lt;/i&gt;&lt;span id=&quot;busuanzi_container_site_uv&quot;&gt;</span><br><span class="line">  本站访客数:&lt;span id=&quot;busuanzi_value_site_uv&quot;&gt;&lt;/span&gt;</span><br><span class="line">&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在这里有两中不同计算方式的统计代码：</p>
+<ol>
+<li>pv的方式，单个用户连续点击n篇文章，记录n次访问量 :<blockquote>
+<p><span id="busuanzi_container_site_pv"><br> 本站总访问量<span id="busuanzi_value_site_pv"></span>次<br></span></p>
+</blockquote>
+</li>
+</ol>
+<p>2 uv的方式，单个用户连续点击n篇文章，只记录1次访客数</p>
+<blockquote>
+<p><span id="busuanzi_container_site_uv"><br>  本站总访问量<span id="busuanzi_value_site_uv"></span>次<br></span></p>
+</blockquote>
+<h4 id="网站底部字数统计"><a href="#网站底部字数统计" class="headerlink" title="网站底部字数统计"></a>网站底部字数统计</h4><p>切换到根目录下，然后运行如下代码:</p>
+<blockquote>
+<p>$ npm install hexo-wordcount –save</p>
+</blockquote>
+<p>然后在/themes/next/layout/_partials/footer.swig文件尾部加上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;theme-info&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;powered-by&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;span class=&quot;post-count&quot;&gt;博客全站共&#123;&#123; totalcount(site) &#125;&#125;字&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="实现统计功能"><a href="#实现统计功能" class="headerlink" title="实现统计功能"></a>实现统计功能</h4><p>在根目录下安装 hexo-wordcount,运行：</p>
+<blockquote>
+<p>$ npm install hexo-wordcount –save</p>
+</blockquote>
+<p>然后在主题的配置文件中，配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  # 单篇 字数统计</span><br><span class="line">  wordcount: true</span><br><span class="line">  # 单篇 阅读时长</span><br><span class="line">  min2read: true</span><br><span class="line">  # 网站 字数统计</span><br><span class="line">  totalcount: true</span><br><span class="line">  separated_meta: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="更多主题优化"><a href="#更多主题优化" class="headerlink" title="更多主题优化"></a>更多主题优化</h3><p>参照：<a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">next</a></p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><h4 id="插入本地图片"><a href="#插入本地图片" class="headerlink" title="插入本地图片"></a>插入本地图片</h4><h5 id="绝对路径"><a href="#绝对路径" class="headerlink" title="绝对路径"></a>绝对路径</h5><p>当Hexo项目中只用到少量图片时，可以将图片统一放在source/images文件夹中，通过markdown语法访问它们。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](/images/image.jpg)</span><br></pre></td></tr></table></figure></p>
+<h5 id="相对路径"><a href="#相对路径" class="headerlink" title="相对路径"></a>相对路径</h5><p>图片除了可以放在统一的images文件夹中，还可以放在文章自己的目录中。文章的目录可以通过配置_config.yml来生成。</p>
 <blockquote>
 <p>post_asset_folder: true</p>
 </blockquote>
 <p>config.yml文件中的配置项post_asset_folder设为true后，执行命令$ hexo new blog_test，在source/_posts中会生成文章blog_test.md和同名文件夹blog_test。<br>将图片资源放在blog_test中，文章就可以使用相对路径引用图片资源了。<br><em>上面的操作我一般都是偷懒，复制一个md文件，然后同时创建一个同名字的文件夹</em></p>
 <blockquote>
-<p><img src="image.jpg" alt=""></p>
+<p><img src="20180516002.jpg" alt="结构"></p>
 </blockquote>
-<h4 id="1-2图床"><a href="#1-2图床" class="headerlink" title="1.2图床"></a>1.2图床</h4><p><a href="https://oss.console.aliyun.com/bucket/oss-cn-beijing/titanblog/overview" target="_blank" rel="noopener">百度云OOS</a></p>
+<h4 id="图床"><a href="#图床" class="headerlink" title="图床"></a>图床</h4><p><a href="https://oss.console.aliyun.com/bucket/oss-cn-beijing/titanblog/overview" target="_blank" rel="noopener">百度云OOS</a></p>
 <p><em>未完，待补充，敬请期待</em></p>
 
       
@@ -422,6 +481,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/theme/" rel="tag"># theme</a>
+          
+        </div>
       
 
       
@@ -542,7 +609,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -613,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-插入图片"><span class="nav-number">1.</span> <span class="nav-text">1.插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1插入本地图片"><span class="nav-number">1.1.</span> <span class="nav-text">1.1插入本地图片</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-1绝对路径"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1.1绝对路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-1相对路径"><span class="nav-number">1.1.2.</span> <span class="nav-text">1.1.1相对路径</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2图床"><span class="nav-number">1.2.</span> <span class="nav-text">1.2图床</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#菜单页"><span class="nav-number">2.</span> <span class="nav-text">菜单页</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置"><span class="nav-number">2.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关联博客"><span class="nav-number">2.2.</span> <span class="nav-text">关联博客</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#新建404界面"><span class="nav-number">2.3.</span> <span class="nav-text">新建404界面</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#头像设置"><span class="nav-number">3.</span> <span class="nav-text">头像设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#修改头像"><span class="nav-number">3.1.</span> <span class="nav-text">修改头像</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置头像边框为圆形框"><span class="nav-number">3.2.</span> <span class="nav-text">设置头像边框为圆形框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#鼠标放置头像上旋转"><span class="nav-number">3.3.</span> <span class="nav-text">鼠标放置头像上旋转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览页面的时候显示当前浏览进度"><span class="nav-number">4.</span> <span class="nav-text">浏览页面的时候显示当前浏览进度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特效"><span class="nav-number">5.</span> <span class="nav-text">特效</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加动态背景"><span class="nav-number">5.1.</span> <span class="nav-text">添加动态背景</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现点击出现桃心效果"><span class="nav-number">5.2.</span> <span class="nav-text">实现点击出现桃心效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改文章内链接文本样式"><span class="nav-number">5.3.</span> <span class="nav-text">修改文章内链接文本样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码块自定义样式"><span class="nav-number">5.4.</span> <span class="nav-text">代码块自定义样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加顶部加载条"><span class="nav-number">5.5.</span> <span class="nav-text">添加顶部加载条</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#统计"><span class="nav-number">6.</span> <span class="nav-text">统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在网站底部加上访问量"><span class="nav-number">6.1.</span> <span class="nav-text">在网站底部加上访问量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#网站底部字数统计"><span class="nav-number">6.2.</span> <span class="nav-text">网站底部字数统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实现统计功能"><span class="nav-number">6.3.</span> <span class="nav-text">实现统计功能</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更多主题优化"><span class="nav-number">7.</span> <span class="nav-text">更多主题优化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插入图片"><span class="nav-number">8.</span> <span class="nav-text">插入图片</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#插入本地图片"><span class="nav-number">8.1.</span> <span class="nav-text">插入本地图片</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#绝对路径"><span class="nav-number">8.1.1.</span> <span class="nav-text">绝对路径</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#相对路径"><span class="nav-number">8.1.2.</span> <span class="nav-text">相对路径</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图床"><span class="nav-number">8.2.</span> <span class="nav-text">图床</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -655,7 +740,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.3k</span>
+    <span title="Site words total count">5.7k</span>
   
 </div>
 
@@ -687,7 +772,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.3k字</span>
+  <span class="post-count">博客全站共5.7k字</span>
 </div>
 
         

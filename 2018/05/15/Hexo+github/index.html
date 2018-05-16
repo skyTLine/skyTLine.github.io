@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Hexo,github," />
 
 
 
@@ -87,6 +87,7 @@
 
 
 <meta name="description" content="1.环境部署1.1github登录到GitHub，点击GitHub中的New repository创建新仓库，仓库名应该为：用户名.http://github.io 这个用户名使用你的GitHub帐号名称代替，这是固定写法。  skytline.github.io   1.2安装git什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用">
+<meta name="keywords" content="Hexo,github">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo+github">
 <meta property="og:url" content="http://yoursite.com/2018/05/15/Hexo+github/index.html">
@@ -102,7 +103,7 @@
 <meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo+github/20180515007.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo+github/20180515008.png">
 <meta property="og:image" content="http://yoursite.com/2018/05/15/Hexo+github/20180515010.jpg">
-<meta property="og:updated_time" content="2018-05-15T12:12:03.657Z">
+<meta property="og:updated_time" content="2018-05-16T06:58:51.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+github">
 <meta name="twitter:description" content="1.环境部署1.1github登录到GitHub，点击GitHub中的New repository创建新仓库，仓库名应该为：用户名.http://github.io 这个用户名使用你的GitHub帐号名称代替，这是固定写法。  skytline.github.io   1.2安装git什么是Git ?简单来说Git是开源的分布式版本控制系统，用于敏捷高效地处理项目。我们网站在本地搭建好了，需要使用">
@@ -214,7 +215,7 @@
         <li class="menu-item menu-item-about">
           <a href="/about/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-about"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
             关于
           </a>
@@ -244,29 +245,9 @@
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-archives"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
           </a>
         </li>
       
@@ -343,6 +324,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -364,7 +367,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,720 字
+                  1,925 字
                 </span>
               
 
@@ -431,8 +434,22 @@
 </li>
 </ul>
 <p><img src="20180515010.jpg" alt="attention"><br>注意看冒号后面的红点，我用的是NotePad++，红点代表一个英文空格！</p>
-<h4 id="1-7后续"><a href="#1-7后续" class="headerlink" title="1.7后续"></a>1.7后续</h4><p>未完，待续！</p>
-<h4 id="1-8参考链接"><a href="#1-8参考链接" class="headerlink" title="1.8参考链接"></a>1.8参考链接</h4><p>1.GitHub+Hexo 搭建个人网站详细教程：<br> <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br>2.Hexo中文官方文档：<br> <a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/setup.html</a></p>
+<h4 id="1-7默认目录结构"><a href="#1-7默认目录结构" class="headerlink" title="1.7默认目录结构"></a>1.7默认目录结构</h4><ul>
+<li>.deploy：执行hexo deploy命令部署到GitHub上的内容目录</li>
+<li>public：执行hexo generate命令，输出的静态网页内容目录</li>
+<li>scaffolds：layout模板文件目录，其中的md文件可以添加编辑</li>
+<li>scripts：扩展脚本目录，这里可以自定义一些javascript脚本</li>
+<li>source：文章源码目录，该目录下的markdown和html文件均会被hexo处理。该页面对应repo的根目录，404文件、favicon.ico文件，CNAME文件等都应该放这里，该目录下可新建页面目录。<ul>
+<li>_drafts：草稿文章</li>
+<li>_posts：发布文章</li>
+</ul>
+</li>
+<li>themes：主题文件目录</li>
+<li>_config.yml：全局配置文件，大多数的设置都在这里</li>
+<li>package.json：应用程序数据，指明hexo的版本等信息，类似于一般软件中的关于按钮</li>
+</ul>
+<h4 id="1-8后续"><a href="#1-8后续" class="headerlink" title="1.8后续"></a>1.8后续</h4><p>未完，待续！</p>
+<h4 id="1-9参考链接"><a href="#1-9参考链接" class="headerlink" title="1.9参考链接"></a>1.9参考链接</h4><p>1.GitHub+Hexo 搭建个人网站详细教程：<br> <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a><br>2.Hexo中文官方文档：<br> <a href="https://hexo.io/zh-cn/docs/setup.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/setup.html</a></p>
 
       
     </div>
@@ -447,6 +464,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+            <a href="/tags/github/" rel="tag"># github</a>
+          
+        </div>
       
 
       
@@ -567,7 +592,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
             
 
           </nav>
@@ -638,7 +681,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-环境部署"><span class="nav-number">1.</span> <span class="nav-text">1.环境部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1github"><span class="nav-number">1.1.</span> <span class="nav-text">1.1github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2安装git"><span class="nav-number">1.2.</span> <span class="nav-text">1.2安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3安装Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">1.3安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4安装Node-js"><span class="nav-number">1.4.</span> <span class="nav-text">1.4安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5部署github"><span class="nav-number">1.5.</span> <span class="nav-text">1.5部署github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6注意事项"><span class="nav-number">1.6.</span> <span class="nav-text">1.6注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7后续"><span class="nav-number">1.7.</span> <span class="nav-text">1.7后续</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8参考链接"><span class="nav-number">1.8.</span> <span class="nav-text">1.8参考链接</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-环境部署"><span class="nav-number">1.</span> <span class="nav-text">1.环境部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1github"><span class="nav-number">1.1.</span> <span class="nav-text">1.1github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2安装git"><span class="nav-number">1.2.</span> <span class="nav-text">1.2安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3安装Node-js"><span class="nav-number">1.3.</span> <span class="nav-text">1.3安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4安装Node-js"><span class="nav-number">1.4.</span> <span class="nav-text">1.4安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-5部署github"><span class="nav-number">1.5.</span> <span class="nav-text">1.5部署github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-6注意事项"><span class="nav-number">1.6.</span> <span class="nav-text">1.6注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-7默认目录结构"><span class="nav-number">1.7.</span> <span class="nav-text">1.7默认目录结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-8后续"><span class="nav-number">1.8.</span> <span class="nav-text">1.8后续</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-9参考链接"><span class="nav-number">1.9.</span> <span class="nav-text">1.9参考链接</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -680,7 +723,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.3k</span>
+    <span title="Site words total count">5.7k</span>
   
 </div>
 
@@ -712,7 +755,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.3k字</span>
+  <span class="post-count">博客全站共5.7k字</span>
 </div>
 
         
