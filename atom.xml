@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-22T02:51:40.225Z</updated>
+  <updated>2018-06-22T07:40:03.017Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker容器</title>
+    <link href="http://yoursite.com/2018/06/22/Docker%E5%AE%B9%E5%99%A8/"/>
+    <id>http://yoursite.com/2018/06/22/Docker容器/</id>
+    <published>2018-06-22T04:27:17.000Z</published>
+    <updated>2018-06-22T07:40:03.017Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="容器是什么"><a href="#容器是什么" class="headerlink" title="容器是什么"></a>容器是什么</h4><p><img src="容器是什么.jpg" alt="容器介绍"><br>什么是容器技术。容器技术其实本身并不是什么崭新的技术，大家经常拿容器技术跟虚拟化技术比较。有一个通俗的说法，容器是极度轻量的虚拟机。<br>怎么理解大家看这个图，左边图展示的是虚拟机，物理服务器里装操作系统，再装上虚拟机管理软件，生成很多虚拟机，然后虚拟机再装操作系统再装各种各样的应用。<br>右边图展示的是容器，物理服务器里装操作系统，绝大多数情况下，容器基于的操作系统是Linux操作系统，然后Linux里装一个容器软件，最常见的是Docker，用Docker运行各种各样的容器，<br>容器里面不需要再装一次操作系统里，容器里面只装各种各样的应用就好了。这两张图对比大家看出来容器跟虚拟机比最大的优势就是轻量很多，容器里面不需要再装一遍操作系统。<br>容器里面的应用重用容器外面的操作系统，特别是Linux内核这些操作系统核心组件。再一点，容器是用于对应用进行封装，容器里面是各种各样的应用程序。<br>用容器封装应用时，会把程序本身和依赖库都打包在一起，这样容器应用具有可移植性，在不同的Linux环境下都可以运行，而不需要再安装依赖库。<br>容器本身的理念是非常非常简单的,容器相当于操作系统的一个进程。</p><h4 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h4><p>Docker属于容器技术的一种。Docker有镜像的概念，Docker镜像和虚拟机镜像不一样的特点就是Docker的镜像是分层的，最下面是基础的镜像，是基础Linux环境，上面每一层镜像装不同应用。<br>Docker镜像分层最大的好处就是应用分发很方便，每次分发Docker应用的时候，只需要下载更新部分的镜像，而不用重新下载整个镜像，实现应用增量分发更新。<br>Docker的优点：</p><h5 id="更高效的利用系统资源"><a href="#更高效的利用系统资源" class="headerlink" title="更高效的利用系统资源"></a>更高效的利用系统资源</h5><p>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。</p><h5 id="更快速的启动时间"><a href="#更快速的启动时间" class="headerlink" title="更快速的启动时间"></a>更快速的启动时间</h5><p>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</p><h5 id="一致的运行环境"><a href="#一致的运行环境" class="headerlink" title="一致的运行环境"></a>一致的运行环境</h5><p>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性，从而不会再出现 「这段代码在我机器上没问题啊」 这类问题。</p><h5 id="持续交付和部署"><a href="#持续交付和部署" class="headerlink" title="持续交付和部署"></a>持续交付和部署</h5><h5 id="更轻松的迁移"><a href="#更轻松的迁移" class="headerlink" title="更轻松的迁移"></a>更轻松的迁移</h5><h5 id="更轻松的维护和扩展"><a href="#更轻松的维护和扩展" class="headerlink" title="更轻松的维护和扩展"></a>更轻松的维护和扩展</h5><table><thead><tr><th>特性</th><th style="text-align:right">容器</th><th style="text-align:center">虚拟机</th></tr></thead><tbody><tr><td>启动</td><td style="text-align:right">秒级</td><td style="text-align:center">分钟级</td></tr><tr><td>硬盘使用</td><td style="text-align:right">一般为 MB</td><td style="text-align:center">一般为 GB</td></tr><tr><td>性能</td><td style="text-align:right">接近原生</td><td style="text-align:center">弱于</td></tr><tr><td>系统支持量</td><td style="text-align:right">单机支持上千个容器</td><td style="text-align:center">一般几十个</td></tr></tbody></table><p>容器与镜像的关系类似于面向对象编程中的对象与类。</p><h4 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h4>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;容器是什么&quot;&gt;&lt;a href=&quot;#容器是什么&quot; class=&quot;headerlink&quot; title=&quot;容器是什么&quot;&gt;&lt;/a&gt;容器是什么&lt;/h4&gt;&lt;p&gt;&lt;img src=&quot;容器是什么.jpg&quot; alt=&quot;容器介绍&quot;&gt;&lt;br&gt;什么是容器技术。容器技术其实本身并不是什么崭
+      
+    
+    </summary>
+    
+      <category term="docker" scheme="http://yoursite.com/categories/docker/"/>
+    
+    
+      <category term="docker" scheme="http://yoursite.com/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>next主题</title>
@@ -123,9 +148,9 @@
     <link href="http://yoursite.com/2018/06/05/IntelliJ%20IDEA%E5%AF%BC%E5%85%A5Spring%E6%BA%90%E7%A0%81/"/>
     <id>http://yoursite.com/2018/06/05/IntelliJ IDEA导入Spring源码/</id>
     <published>2018-06-05T06:58:31.000Z</published>
-    <updated>2018-06-19T09:30:29.637Z</updated>
+    <updated>2018-06-28T03:53:17.003Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="下载spring源码"><a href="#下载spring源码" class="headerlink" title="下载spring源码"></a>下载spring源码</h4><p>Spring源码现在在github中，因此需要先安装git(具体下载安装git就自行百度)，现在假设已经安装好git并且设置好了用户名和邮箱，使用下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/SpringSource/Spring-framework.git</span><br></pre></td></tr></table></figure></p><h4 id="下载gradle"><a href="#下载gradle" class="headerlink" title="下载gradle"></a>下载gradle</h4><p><a href="https://gradle.org/releases/" target="_blank" rel="noopener">Gradle下载地址</a><br><img src="1528182320.jpg" alt="点击下载"><br>配置：<br>1、创建系统环境变量：GRADLE_HOME gradle指定目录,eg:D:\software\gradle\gradle-4.8\bin<br>2、path：;%GRADLE_HOME%<br>（Linux环境请添加到.bash_profile中<br>3、配置好了后打开cmd，输入gradle -v看是否成功</p><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>安装好Gradle之后就可以根据步骤进行编译了。<br>最好将jdk版本升级到1.8，因为编译项目的时候有一个-XX:MaxMetaspaceSize=1024m的参数需要jdk1.8才支持，否则会报错。 </p><p>spring目录中：import-into-eclipse.*是导入Eclipse的脚本，点击运行之后会有提示。<br>因为我用的是idea，因此需要使用import-into-idea.md，最后一个文件是文本文件，打开之后会发现这是一个指导用户怎么编译的说明（这是一个用markdown语法写的文件）。<br><img src="spring-framework-import.png" alt="framework"><br>打开cmd，cd到spring源码目录中，使用命令：gradlew.bat cleanIdea :spring-oxm:compileTestJava。耐心等待。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gradlew.bat cleanIdea :spring-oxm:compileTestJava</span><br></pre></td></tr></table></figure></p><p><img src="spring-framework-compile.jpg" alt="compile"></p><h4 id="导入IDEA"><a href="#导入IDEA" class="headerlink" title="导入IDEA"></a>导入IDEA</h4><p>打开IDEA，File-&gt;New-&gt;Project From Existing Sources…，选中Spring-framework文件夹，OK-&gt;Import project from external model，选中Gradle，点击Next，然后点击Finish，<br>等待IDEA导入即可。<br>gradle开始编译：<br><img src="idea_gradle_compile.jpg" alt="compileing"><br>gradle编译结束：<br><img src="idea_gradle_compile_sucess2.jpg" alt="compileSuccess"></p><h4 id="spring-framework"><a href="#spring-framework" class="headerlink" title="spring-framework"></a>spring-framework</h4><p>如果你嫌上面的步骤麻烦，或者你就是单纯只想运行spring编译好的源码，可以直接下载：<br>链接：<a href="https://pan.baidu.com/s/10x3X4rFooLbzFxLs6e2MwQ" target="_blank" rel="noopener">https://pan.baidu.com/s/10x3X4rFooLbzFxLs6e2MwQ</a><br>密码：xpz2</p>]]></content>
+    <content type="html"><![CDATA[<h4 id="下载spring源码"><a href="#下载spring源码" class="headerlink" title="下载spring源码"></a>下载spring源码</h4><p>Spring源码现在在github中，因此需要先安装git(具体下载安装git就自行百度)，现在假设已经安装好git并且设置好了用户名和邮箱，使用下面的命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git://github.com/SpringSource/Spring-framework.git</span><br></pre></td></tr></table></figure></p><h4 id="下载gradle"><a href="#下载gradle" class="headerlink" title="下载gradle"></a>下载gradle</h4><p><a href="https://gradle.org/releases/" target="_blank" rel="noopener">Gradle下载地址</a><br><img src="1528182320.jpg" alt="点击下载"><br>配置：<br>1、创建系统环境变量：GRADLE_HOME gradle指定目录,eg:D:\software\gradle\gradle-4.8\bin<br>2、path：;%GRADLE_HOME%<br>（Linux环境请添加到.bash_profile中）<br>3、配置好了后打开cmd，输入gradle -v看是否成功</p><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>安装好Gradle之后就可以根据步骤进行编译了。<br>最好将jdk版本升级到1.8，因为编译项目的时候有一个-XX:MaxMetaspaceSize=1024m的参数需要jdk1.8才支持，否则会报错。 </p><p>spring目录中：import-into-eclipse.*是导入Eclipse的脚本，点击运行之后会有提示。<br>因为我用的是idea，因此需要使用import-into-idea.md，最后一个文件是文本文件，打开之后会发现这是一个指导用户怎么编译的说明（这是一个用markdown语法写的文件）。<br><img src="spring-framework-import.png" alt="framework"><br>打开cmd，cd到spring源码目录中，使用命令：gradlew.bat cleanIdea :spring-oxm:compileTestJava。耐心等待。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gradlew.bat cleanIdea :spring-oxm:compileTestJava</span><br></pre></td></tr></table></figure></p><p><img src="spring-framework-compile.jpg" alt="compile"></p><h4 id="导入IDEA"><a href="#导入IDEA" class="headerlink" title="导入IDEA"></a>导入IDEA</h4><p>打开IDEA，File-&gt;New-&gt;Project From Existing Sources…，选中Spring-framework文件夹，OK-&gt;Import project from external model，选中Gradle，点击Next，然后点击Finish，<br>等待IDEA导入即可。<br>gradle开始编译：<br><img src="idea_gradle_compile.jpg" alt="compileing"><br>gradle编译结束：<br><img src="idea_gradle_compile_sucess2.jpg" alt="compileSuccess"></p><h4 id="spring-framework"><a href="#spring-framework" class="headerlink" title="spring-framework"></a>spring-framework</h4><p>如果你嫌上面的步骤麻烦，或者你就是单纯只想运行spring编译好的源码，可以直接下载：<br>链接：<a href="https://pan.baidu.com/s/10x3X4rFooLbzFxLs6e2MwQ" target="_blank" rel="noopener">https://pan.baidu.com/s/10x3X4rFooLbzFxLs6e2MwQ</a><br>密码：xpz2</p>]]></content>
     
     <summary type="html">
     
@@ -255,15 +280,16 @@
     <link href="http://yoursite.com/2018/05/11/%E5%B8%85%E7%9A%84%E4%BA%BA%E8%AF%B7%E7%82%B9%E8%BF%99%E9%87%8C/"/>
     <id>http://yoursite.com/2018/05/11/帅的人请点这里/</id>
     <published>2018-05-11T04:17:27.877Z</published>
-    <updated>2018-06-22T02:51:47.153Z</updated>
+    <updated>2018-06-22T07:19:06.953Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/q81RER" target="_blank" rel="noopener">Markdown</a></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/q81RER&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Markdown&lt;/a&gt;&lt;/p&gt;
+
       
     
     </summary>
