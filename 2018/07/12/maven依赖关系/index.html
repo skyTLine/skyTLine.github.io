@@ -73,7 +73,7 @@
 
 
 
-  <meta name="keywords" content="docker," />
+  <meta name="keywords" content="maven," />
 
 
 
@@ -86,20 +86,20 @@
 
 
 
-<meta name="description" content="容器是什么什么是容器技术。容器技术其实本身并不是什么崭新的技术，大家经常拿容器技术跟虚拟化技术比较。有一个通俗的说法，容器是极度轻量的虚拟机。怎么理解大家看这个图，左边图展示的是虚拟机，物理服务器里装操作系统，再装上虚拟机管理软件，生成很多虚拟机，然后虚拟机再装操作系统再装各种各样的应用。右边图展示的是容器，物理服务器里装操作系统，绝大多数情况下，容器基于的操作系统是Linux操作系统，然后Lin">
-<meta name="keywords" content="docker">
+<meta name="description" content="maven项目的依赖关系主要分为三种：依赖，继承，聚合。 依赖依赖关系是最常用的一种，就是你的项目需要依赖其他项目，比如Apache-common包，Spring包等等，子module之间也可以互相依赖，比如childB依赖childA:1234567&amp;lt;dependencies&amp;gt;    &amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;com.tl.bu">
+<meta name="keywords" content="maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Docker容器">
-<meta property="og:url" content="http://yoursite.com/2018/06/22/Docker容器/index.html">
+<meta property="og:title" content="maven依赖关系">
+<meta property="og:url" content="http://yoursite.com/2018/07/12/maven依赖关系/index.html">
 <meta property="og:site_name" content="Titan&#39;Notes">
-<meta property="og:description" content="容器是什么什么是容器技术。容器技术其实本身并不是什么崭新的技术，大家经常拿容器技术跟虚拟化技术比较。有一个通俗的说法，容器是极度轻量的虚拟机。怎么理解大家看这个图，左边图展示的是虚拟机，物理服务器里装操作系统，再装上虚拟机管理软件，生成很多虚拟机，然后虚拟机再装操作系统再装各种各样的应用。右边图展示的是容器，物理服务器里装操作系统，绝大多数情况下，容器基于的操作系统是Linux操作系统，然后Lin">
+<meta property="og:description" content="maven项目的依赖关系主要分为三种：依赖，继承，聚合。 依赖依赖关系是最常用的一种，就是你的项目需要依赖其他项目，比如Apache-common包，Spring包等等，子module之间也可以互相依赖，比如childB依赖childA:1234567&amp;lt;dependencies&amp;gt;    &amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;com.tl.bu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/06/22/Docker容器/容器是什么.jpg">
-<meta property="og:updated_time" content="2018-06-22T07:40:03.017Z">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/maven依赖关系/依赖scope对比.png">
+<meta property="og:updated_time" content="2018-07-12T11:45:00.666Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker容器">
-<meta name="twitter:description" content="容器是什么什么是容器技术。容器技术其实本身并不是什么崭新的技术，大家经常拿容器技术跟虚拟化技术比较。有一个通俗的说法，容器是极度轻量的虚拟机。怎么理解大家看这个图，左边图展示的是虚拟机，物理服务器里装操作系统，再装上虚拟机管理软件，生成很多虚拟机，然后虚拟机再装操作系统再装各种各样的应用。右边图展示的是容器，物理服务器里装操作系统，绝大多数情况下，容器基于的操作系统是Linux操作系统，然后Lin">
-<meta name="twitter:image" content="http://yoursite.com/2018/06/22/Docker容器/容器是什么.jpg">
+<meta name="twitter:title" content="maven依赖关系">
+<meta name="twitter:description" content="maven项目的依赖关系主要分为三种：依赖，继承，聚合。 依赖依赖关系是最常用的一种，就是你的项目需要依赖其他项目，比如Apache-common包，Spring包等等，子module之间也可以互相依赖，比如childB依赖childA:1234567&amp;lt;dependencies&amp;gt;    &amp;lt;dependency&amp;gt;        &amp;lt;groupId&amp;gt;com.tl.bu">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/12/maven依赖关系/依赖scope对比.png">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/22/Docker容器/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/12/maven依赖关系/"/>
 
 
 
 
 
-  <title>Docker容器 | Titan'Notes</title>
+  <title>maven依赖关系 | Titan'Notes</title>
   
 
 
@@ -276,7 +276,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/22/Docker容器/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/12/maven依赖关系/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="leitian">
@@ -293,7 +293,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Docker容器</h1>
+          <h1 class="post-title" itemprop="name headline">maven依赖关系</h1>
         
 
         <div class="post-meta">
@@ -305,8 +305,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-22T12:27:17+08:00">
-                2018-06-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-12T19:02:31+08:00">
+                2018-07-12
               </time>
             
 
@@ -328,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/docker/" itemprop="url" rel="index">
-                    <span itemprop="name">docker</span>
+                  <a href="/categories/maven/" itemprop="url" rel="index">
+                    <span itemprop="name">maven</span>
                   </a>
                 </span>
 
@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  924 字
+                  870 字
                 </span>
               
 
@@ -375,7 +375,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -396,44 +396,23 @@
       
 
       
-        <h4 id="容器是什么"><a href="#容器是什么" class="headerlink" title="容器是什么"></a>容器是什么</h4><p><img src="容器是什么.jpg" alt="容器介绍"><br>什么是容器技术。容器技术其实本身并不是什么崭新的技术，大家经常拿容器技术跟虚拟化技术比较。有一个通俗的说法，容器是极度轻量的虚拟机。<br>怎么理解大家看这个图，左边图展示的是虚拟机，物理服务器里装操作系统，再装上虚拟机管理软件，生成很多虚拟机，然后虚拟机再装操作系统再装各种各样的应用。<br>右边图展示的是容器，物理服务器里装操作系统，绝大多数情况下，容器基于的操作系统是Linux操作系统，然后Linux里装一个容器软件，最常见的是Docker，用Docker运行各种各样的容器，<br>容器里面不需要再装一次操作系统里，容器里面只装各种各样的应用就好了。这两张图对比大家看出来容器跟虚拟机比最大的优势就是轻量很多，容器里面不需要再装一遍操作系统。<br>容器里面的应用重用容器外面的操作系统，特别是Linux内核这些操作系统核心组件。再一点，容器是用于对应用进行封装，容器里面是各种各样的应用程序。<br>用容器封装应用时，会把程序本身和依赖库都打包在一起，这样容器应用具有可移植性，在不同的Linux环境下都可以运行，而不需要再安装依赖库。<br>容器本身的理念是非常非常简单的,容器相当于操作系统的一个进程。</p>
-<h4 id="Docker"><a href="#Docker" class="headerlink" title="Docker"></a>Docker</h4><p>Docker属于容器技术的一种。Docker有镜像的概念，Docker镜像和虚拟机镜像不一样的特点就是Docker的镜像是分层的，最下面是基础的镜像，是基础Linux环境，上面每一层镜像装不同应用。<br>Docker镜像分层最大的好处就是应用分发很方便，每次分发Docker应用的时候，只需要下载更新部分的镜像，而不用重新下载整个镜像，实现应用增量分发更新。<br>Docker的优点：</p>
-<h5 id="更高效的利用系统资源"><a href="#更高效的利用系统资源" class="headerlink" title="更高效的利用系统资源"></a>更高效的利用系统资源</h5><p>由于容器不需要进行硬件虚拟以及运行完整操作系统等额外开销，Docker 对系统资源的利用率更高。</p>
-<h5 id="更快速的启动时间"><a href="#更快速的启动时间" class="headerlink" title="更快速的启动时间"></a>更快速的启动时间</h5><p>传统的虚拟机技术启动应用服务往往需要数分钟，而 Docker 容器应用，由于直接运行于宿主内核，无需启动完整的操作系统，因此可以做到秒级、甚至毫秒级的启动时间。大大的节约了开发、测试、部署的时间。</p>
-<h5 id="一致的运行环境"><a href="#一致的运行环境" class="headerlink" title="一致的运行环境"></a>一致的运行环境</h5><p>开发过程中一个常见的问题是环境一致性问题。由于开发环境、测试环境、生产环境不一致，导致有些 bug 并未在开发过程中被发现。而 Docker 的镜像提供了除内核外完整的运行时环境，确保了应用运行环境一致性，从而不会再出现 「这段代码在我机器上没问题啊」 这类问题。</p>
-<h5 id="持续交付和部署"><a href="#持续交付和部署" class="headerlink" title="持续交付和部署"></a>持续交付和部署</h5><h5 id="更轻松的迁移"><a href="#更轻松的迁移" class="headerlink" title="更轻松的迁移"></a>更轻松的迁移</h5><h5 id="更轻松的维护和扩展"><a href="#更轻松的维护和扩展" class="headerlink" title="更轻松的维护和扩展"></a>更轻松的维护和扩展</h5><table>
-<thead>
-<tr>
-<th>特性</th>
-<th style="text-align:right">容器</th>
-<th style="text-align:center">虚拟机</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>启动</td>
-<td style="text-align:right">秒级</td>
-<td style="text-align:center">分钟级</td>
-</tr>
-<tr>
-<td>硬盘使用</td>
-<td style="text-align:right">一般为 MB</td>
-<td style="text-align:center">一般为 GB</td>
-</tr>
-<tr>
-<td>性能</td>
-<td style="text-align:right">接近原生</td>
-<td style="text-align:center">弱于</td>
-</tr>
-<tr>
-<td>系统支持量</td>
-<td style="text-align:right">单机支持上千个容器</td>
-<td style="text-align:center">一般几十个</td>
-</tr>
-</tbody>
-</table>
-<p>容器与镜像的关系类似于面向对象编程中的对象与类。</p>
-<h4 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h4>
+        <p>maven项目的依赖关系主要分为三种：依赖，继承，聚合。</p>
+<h4 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h4><p>依赖关系是最常用的一种，就是你的项目需要依赖其他项目，比如Apache-common包，Spring包等等，子module之间也可以互相依赖，比如childB依赖childA:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;com.tl.business.service&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;business-service-core&lt;/artifactId&gt;</span><br><span class="line">        &lt;version&gt;1.0.0&lt;/version&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></p>
+<p>任意一个外部依赖说明包含如下几个要素：groupId, artifactId, version, scope, type, optional。其中前3个是必须的。</p>
+<blockquote>
+<p>scope作用域比较：<br>compile 是默认的范围,果没有提供一个范围，那该依赖的范围就是编译范围。编译范围依赖在所有的classpath中可用，同时它们也会被打包;<br>provided 例如javax.servlet-api，当你希望你的应用服务器或者servlet容器提供，这样该依赖不会被打包，就不会出现jar重复冲突的问题；<br>test 范围依赖在编译和运行时都不需要，它们只有在测试编译和测试运行阶段可用;</p>
+</blockquote>
+<p><img src="依赖scope对比.png" alt="scope"></p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>继承就是避免重复，maven的继承也是这样，它还有一个好处就是让项目更加安全。项目之间存在上下级关系时就属于继承关系。<br>父项目的配置如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencyManagement&gt;</span><br><span class="line">  &lt;dependencies&gt;</span><br><span class="line">     &lt;dependency&gt;</span><br><span class="line">          &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">         &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;</span><br><span class="line">         &lt;version&gt;2.5&lt;/version&gt;</span><br><span class="line">     &lt;/dependency&gt;</span><br><span class="line">  &lt;/dependencies&gt;</span><br><span class="line">&lt;/dependencyManagement&gt;</span><br></pre></td></tr></table></figure></p>
+<p>子pom如果需要引用该jar包，则直接引用即可！不需要加入<version>，便于统一管理。此外也可以加入仅在子pom中用到的jar包，比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependencies&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;servlet-api&lt;/artifactId&gt;   &lt;!--此处不再需要verison了！--&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">    &lt;dependency&gt;</span><br><span class="line">        &lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">        &lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">        &lt;scope&gt;test&lt;/scope&gt;   &lt;!--当然也可以加入只在这个子模块中用到的jar包--&gt;</span><br><span class="line">    &lt;/dependency&gt;</span><br><span class="line">&lt;/dependencies&gt;</span><br></pre></td></tr></table></figure></version></p>
+<p>父项目在dependencies声明的依赖，子项目会从全部自动地继承。而父项目在dependencyManagement里只是声明依赖，并不实现引入，因此子项目需要显示的声明需要用的依赖。如果不在子项目中声明依赖，是不会从父项目中继承下来的；<br>只有在子项目中写了该依赖项，并且没有指定具体版本，才会从父项目中继承该项，并且version和scope都读取自父pom另外如果子项目中指定了版本号，那么会使用子项目中指定的jar版本。</p>
+<h4 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h4><p>maven的多模块管理也是非常强大的。一般来说，maven要求同一个工程的所有模块都放置到同一个目录下，每一个子目录代表一个模块，比如：<br>Parent<br>—— childA(business-service-core)<br>          — pom.xml</p>
+<p>—— childB(business-service-web)<br>         — pom.xml</p>
+<p>—— pom.xml(business-service)</p>
+<p>父模块：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;groupId&gt;com.tl.business.service&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;business-service&lt;/artifactId&gt;</span><br><span class="line">&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</span><br><span class="line">&lt;packaging&gt;pom&lt;/packaging&gt;</span><br><span class="line">&lt;version&gt;1.0.0&lt;/version&gt;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;modules&gt;</span><br><span class="line">  &lt;module&gt;childA&lt;/module&gt;</span><br><span class="line">  &lt;module&gt;childB&lt;/module&gt;</span><br><span class="line">&lt;/modules&gt;</span><br></pre></td></tr></table></figure>
+<p>这样只是告诉maven编译器，在读取parent的pom文件时去找到childA和childB，但还是会分别去编译他们引入的依赖。这样就会导致pom文件引入的包重复！！！<br>于是我们引入了”继承”的概念，也就是形成”父子”关系，所以继承与聚合常常会一起使用。<br>父pom写好了，子pom就通过<parent>标签继承父pom的依赖，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;parent&gt;</span><br><span class="line">    &lt;artifactId&gt;business-service&lt;/artifactId&gt;</span><br><span class="line">    &lt;groupId&gt;com.tl.business.service&lt;/groupId&gt;</span><br><span class="line">    &lt;version&gt;1.0.0&lt;/version&gt;</span><br><span class="line">&lt;/parent&gt;</span><br></pre></td></tr></table></figure></parent></p>
+
       
     </div>
     
@@ -450,7 +429,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/docker/" rel="tag"># docker</a>
+            <a href="/tags/maven/" rel="tag"># maven</a>
           
         </div>
       
@@ -463,8 +442,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/22/next主题/" rel="next" title="next主题">
-                <i class="fa fa-chevron-left"></i> next主题
+              <a href="/2018/06/22/Docker容器/" rel="next" title="Docker容器">
+                <i class="fa fa-chevron-left"></i> Docker容器
               </a>
             
           </div>
@@ -472,10 +451,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/12/maven依赖关系/" rel="prev" title="maven依赖关系">
-                maven依赖关系 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -662,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#容器是什么"><span class="nav-number">1.</span> <span class="nav-text">容器是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Docker"><span class="nav-number">2.</span> <span class="nav-text">Docker</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#更高效的利用系统资源"><span class="nav-number">2.1.</span> <span class="nav-text">更高效的利用系统资源</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#更快速的启动时间"><span class="nav-number">2.2.</span> <span class="nav-text">更快速的启动时间</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#一致的运行环境"><span class="nav-number">2.3.</span> <span class="nav-text">一致的运行环境</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#持续交付和部署"><span class="nav-number">2.4.</span> <span class="nav-text">持续交付和部署</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#更轻松的迁移"><span class="nav-number">2.5.</span> <span class="nav-text">更轻松的迁移</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#更轻松的维护和扩展"><span class="nav-number">2.6.</span> <span class="nav-text">更轻松的维护和扩展</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#未完待续"><span class="nav-number">3.</span> <span class="nav-text">未完待续</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#依赖"><span class="nav-number">1.</span> <span class="nav-text">依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">2.</span> <span class="nav-text">继承</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#聚合"><span class="nav-number">3.</span> <span class="nav-text">聚合</span></a></li></ol></div>
             
 
           </div>

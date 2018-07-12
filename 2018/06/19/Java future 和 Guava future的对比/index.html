@@ -95,7 +95,7 @@
 <meta property="og:description" content="Java futurefuture介绍在并发编程时，一般使用runnable，然后扔给线程池完事，这种情况下不需要线程的结果。所以run的返回值是void类型。 线程是属于异步计算模型，所以你不可能直接从别的线程中得到函数返回值。这时候，Future就出场了。Futrue可以监视目标线程调用call的情况，当你调用Future的get()方法以获得结果时，当前线程就开始阻塞，直接call方法结束返">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2018/06/19/Java%20future%20和%20Guava%20future的对比/普通方式和future模式的差距.jpg">
-<meta property="og:updated_time" content="2018-06-19T11:50:08.919Z">
+<meta property="og:updated_time" content="2018-07-12T11:46:10.915Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java future 和 Guava future的对比">
 <meta name="twitter:description" content="Java futurefuture介绍在并发编程时，一般使用runnable，然后扔给线程池完事，这种情况下不需要线程的结果。所以run的返回值是void类型。 线程是属于异步计算模型，所以你不可能直接从别的线程中得到函数返回值。这时候，Future就出场了。Futrue可以监视目标线程调用call的情况，当你调用Future的get()方法以获得结果时，当前线程就开始阻塞，直接call方法结束返">
@@ -359,7 +359,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,367 字
+                  1,504 字
                 </span>
               
 
@@ -375,7 +375,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  6 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -397,7 +397,7 @@
 
       
         <h3 id="Java-future"><a href="#Java-future" class="headerlink" title="Java future"></a>Java future</h3><h4 id="future介绍"><a href="#future介绍" class="headerlink" title="future介绍"></a>future介绍</h4><p>在并发编程时，一般使用runnable，然后扔给线程池完事，这种情况下不需要线程的结果。所以run的返回值是void类型。 线程是属于异步计算模型，所以你不可能直接从别的线程中得到函数返回值。<br>这时候，Future就出场了。Futrue可以监视目标线程调用call的情况，当你调用Future的get()方法以获得结果时，当前线程就开始阻塞，直接call方法结束返回结果。一个任务的执行结果又该怎么获取呢?这里就需要用到Future接口中的isDone()方法来判断任务是否执行完，<br>如果完成完成则可获取结果，如果没有完成则需要等待，可见虽然主线程中的多个任务是异步执行，但是无法确定任务什么时候执行完成，只能通过不断去监听以获取结果，所以这里是阻塞的。<br>Future模式是多线程开发中非常常见的一种设计模式。它的核心思想是异步调用。当我们需要调用一个函数方法时。如果这个函数执行很慢,那么我们就要进行等待。但有时候,我们可能并不急着要结果。<br>因此,我们可以让被调用者立即返回,让他在后台慢慢处理这个请求。对于调用者来说,则可以先处理一些其他任务,在真正需要数据的场合再去尝试获取需要的数据。</p>
-<p>普通方式和Future模式的差别：<br><img src="普通方式和future模式的差距.jpg" alt="两种方式的差异"></p>
+<p>普通方式和Future模式的差别：<br><img src="普通方式和future模式的差距.jpg" alt="两种方式的差异"><br>Future模式可以这样来描述：我有一个任务，提交给了Future，Future替我完成这个任务。期间我自己可以去做任何想做的事情。一段时间之后，我就便可以从Future那儿取出结果。就相当于下了一张订货单，一段时间后可以拿着提订单来提货，这期间可以干别的任何事情。<br>其中Future 接口就是订货单，真正处理订单的是Executor类，它根据Future接口的要求来生产产品。</p>
 <h4 id="future-demo"><a href="#future-demo" class="headerlink" title="future demo"></a>future demo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">package com.ctrip.gs.live.business.service.remoting.soa20.test;</span><br><span class="line"></span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.concurrent.*;</span><br><span class="line"></span><br><span class="line">public class FutureTestDemo &#123;</span><br><span class="line"></span><br><span class="line">    public static class Mytask implements Callable &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public Object call() throws Exception &#123;</span><br><span class="line">            String tid = String.valueOf(Thread.currentThread().getId());</span><br><span class="line">            // %s表示输出字符串，也就是将后面的字符串替换模式中的%s</span><br><span class="line">            // %n表示换行</span><br><span class="line">            System.out.printf(&quot;Thread#%s : in call\n&quot;, tid);</span><br><span class="line">            Thread.sleep(10000);</span><br><span class="line">            return tid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws ExecutionException, InterruptedException &#123;</span><br><span class="line">        List&lt;Future&lt;String&gt;&gt; results = new ArrayList&lt;Future&lt;String&gt;&gt;();</span><br><span class="line">        // 创建一个线程池</span><br><span class="line">//        ExecutorService pool = Executors.newFixedThreadPool(5);</span><br><span class="line">        ExecutorService es = Executors.newCachedThreadPool();</span><br><span class="line">        for (int i = 0; i &lt; 10; i++)</span><br><span class="line">            results.add(es.submit(new Mytask()));</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;==========线程执行结束==========&quot;);</span><br><span class="line"></span><br><span class="line">        for (Future&lt;String&gt; res : results) &#123;</span><br><span class="line">            System.out.println(&quot;Future中get结果&quot; + res.get());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(&quot;==========Future方法get结束==========&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Thread#10 : in call</span><br><span class="line">Thread#16 : in call</span><br><span class="line">Thread#12 : in call</span><br><span class="line">Thread#17 : in call</span><br><span class="line">Thread#13 : in call</span><br><span class="line">Thread#19 : in call</span><br><span class="line">Thread#18 : in call</span><br><span class="line">==========线程执行结束==========</span><br><span class="line">Thread#15 : in call</span><br><span class="line">Thread#14 : in call</span><br><span class="line">Thread#11 : in call</span><br><span class="line">Future中get结果10</span><br><span class="line">Future中get结果11</span><br><span class="line">Future中get结果12</span><br><span class="line">Future中get结果13</span><br><span class="line">Future中get结果14</span><br><span class="line">Future中get结果15</span><br><span class="line">Future中get结果16</span><br><span class="line">Future中get结果17</span><br><span class="line">Future中get结果18</span><br><span class="line">Future中get结果19</span><br><span class="line">==========Future方法get结束==========</span><br><span class="line"></span><br><span class="line">Process finished with exit code 0</span><br></pre></td></tr></table></figure></p>
 <h3 id="Guava-future"><a href="#Guava-future" class="headerlink" title="Guava future"></a>Guava future</h3><p>ListenableFuture是可以监听的Future，它是对java原生Future的扩展增强。Future表示一个异步计算任务，当任务完成时可以得到计算结果。如果希望计算完成时马上就拿到结果展示给用户或者做另外的计算，<br>就必须使用另一个线程不断的查询计算状态。这样做会使得代码复杂，且效率低下。如果使用ListenableFuture，Guava会帮助检测Future是否完成了，如果完成就自动调用回调函数，这样可以减少并发程序的复杂度。</p>
@@ -540,7 +540,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -551,7 +551,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -562,7 +562,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -678,7 +678,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">10.8k</span>
+    <span title="Site words total count">11.9k</span>
   
 </div>
 
@@ -710,7 +710,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共10.8k字</span>
+  <span class="post-count">博客全站共11.9k字</span>
 </div>
 
         
